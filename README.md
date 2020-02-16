@@ -31,7 +31,7 @@ In this project, You can search for anyone who is using github. Check their prof
 - Create-React-App
 - CSS
 
-### ✨ [Live Demo]()
+### ✨ [Live Demo](https://emregithub-finder.netlify.com/)
 
 ## Usage
 
