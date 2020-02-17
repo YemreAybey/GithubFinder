@@ -19,13 +19,7 @@ const UsersList = () => {
     }
   };
 
-  return <div style={userStyle}>{renderUsers()}</div>;
-};
-
-const userStyle = {
-  display: "grid",
-  gridTemplateColumns: "repeat(3, 1fr)",
-  gridGap: "1rem"
+  return <div className="grid-3">{renderUsers()}</div>;
 };
 
 export default UsersList;
