@@ -7,19 +7,19 @@ const UsersList = () => {
   const githubContext = useContext(GithubContext);
   const { users, loading } = githubContext;
 
-  const renderUsers = () => {
-    if (loading) {
-      return <Spinner />;
-    } else if (users) {
-      return users.map(u => {
-        return <UserItem usr={u} key={u.id} />;
-      });
-    } else {
-      return null;
-    }
+  const renderList = users => {
+    return users.map(u => {
+      return <UserItem usr={u} key={u.id} />;
+    });
   };
 
-  return <div className="grid-3">{renderUsers()}</div>;
+  if (loading) {
+    return <Spinner />;
+  } else if (users) {
+    return <div className="grid-3">{renderList(users)}</div>;
+  } else {
+    return null;
+  }
 };
 
 export default UsersList;
